@@ -1,0 +1,56 @@
+body {
+    background-color: grey;
+}
+
+#cont-2, #cont-3 {
+    margin-left: 100px;
+}
+
+.card-container {
+    position: relative;
+    height: 230px;
+    width: 180px;
+    top: 70px;
+    left: 21%;
+    perspective: 600;
+    cursor: pointer;
+}
+
+.card-container > div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+}
+
+.card-container:hover > div {
+    transform: rotateY(180deg);
+}
+
+.card-container > div > div {
+    position: absolute;
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.card-container > div > div:first-child {
+    transform: rotateY(180deg);
+}
+
+button#play {
+    position: absolute;
+    left: 45%;
+    top: 70%;
+    color: white;
+    background-color: #3399ff;
+    border-color: #3399ff; 
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
